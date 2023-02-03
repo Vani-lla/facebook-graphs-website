@@ -1,0 +1,177 @@
+/*!**********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Graph/Graph.css ***!
+  \**********************************************************************************/
+.graphs-container {
+    position: absolute;
+    top: 15vh;
+    margin: 0 5vw;
+    width: 90vw;
+}
+
+.graphs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.line-graph {
+    width: 85%;
+}
+
+.chart-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.round-graph {
+    width: 50%;
+}
+
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Main/Main.css ***!
+  \********************************************************************************/
+.display-jsons {
+    position: absolute;
+    top: 15vh;
+    margin: 0 5vw;
+    width: 90vw;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5em;
+}
+
+.jsons {
+    display: flex;
+    flex-direction: column;
+}
+
+.jsons a {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    background-color: rgba(0, 0, 0, .7);
+    padding: .3em 1.3em;
+    border-radius: 1em;
+
+    display: flex;
+    justify-content: space-between;
+
+    transition: all .3s;
+}
+
+.jsons a:hover {
+    background-color: rgba(0, 0, 0, .8);
+    color: var(--highlight);
+}
+
+.jsons a * {
+    color: inherit;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.file-upload > * {
+    margin-bottom: 2em;
+}
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/Status/Status.css ***!
+  \************************************************************************************/
+.status {
+    position: fixed;
+    width: 100vw;
+    height: 1.5em;
+    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.status * {
+    margin-right: 1em;
+}
+
+.status .username {
+    font-weight: 900;
+}
+
+.status .logout {
+    text-decoration: none;
+}
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+:root {
+    --highlight: #E1E110;
+    --background: #28112B;
+    --primary: #B8D3D1;
+}
+
+* {
+    color: var(--primary);
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #28112B;
+}
+
+#login_form {
+    position: absolute;
+    width: 30vw;
+    height: 25vh;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 1em;
+    border-radius: 25px;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#login_form input {
+    background-color: var(--background);
+    font-size: 1.5em;
+    border: 1px solid var(--highlight);
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+#login_form input:focus {
+    border-color: var(--highlight);
+    box-shadow: 0 0 10px var(--highlight);
+}
+
+.loader {
+    position: absolute;
+    width: 5em; height: 5em;
+
+    margin: auto;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+
+    background: linear-gradient(var(--background), var(--highlight));
+    border-radius: 50%;
+    animation-name: loader;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(1turn);
+    }
+}

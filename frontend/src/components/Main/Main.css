@@ -1,0 +1,49 @@
+.display-jsons {
+    position: absolute;
+    top: 15vh;
+    margin: 0 5vw;
+    width: 90vw;
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5em;
+}
+
+.jsons {
+    display: flex;
+    flex-direction: column;
+}
+
+.jsons a {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    background-color: rgba(0, 0, 0, .7);
+    padding: .3em 1.3em;
+    border-radius: 1em;
+
+    display: flex;
+    justify-content: space-between;
+
+    transition: all .3s;
+}
+
+.jsons a:hover {
+    background-color: rgba(0, 0, 0, .8);
+    color: var(--highlight);
+}
+
+.jsons a * {
+    color: inherit;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.file-upload > * {
+    margin-bottom: 2em;
+}

@@ -1,0 +1,69 @@
+:root {
+    --highlight: #E1E110;
+    --background: #28112B;
+    --primary: #B8D3D1;
+}
+
+* {
+    color: var(--primary);
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #28112B;
+}
+
+#login_form {
+    position: absolute;
+    width: 30vw;
+    height: 25vh;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 1em;
+    border-radius: 25px;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#login_form input {
+    background-color: var(--background);
+    font-size: 1.5em;
+    border: 1px solid var(--highlight);
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+#login_form input:focus {
+    border-color: var(--highlight);
+    box-shadow: 0 0 10px var(--highlight);
+}
+
+.loader {
+    position: absolute;
+    width: 5em; height: 5em;
+
+    margin: auto;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+
+    background: linear-gradient(var(--background), var(--highlight));
+    border-radius: 50%;
+    animation-name: loader;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(1turn);
+    }
+}
